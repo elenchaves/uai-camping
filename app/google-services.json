@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "723479591587",
+    "project_id": "antonia-elen",
+    "storage_bucket": "antonia-elen.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723479591587:android:780a1ef2e99eee8dce9d16",
+        "android_client_info": {
+          "package_name": "com.uaicamping"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcapGe2owtrBctdQSD7mKU6-YAc6eyjoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
