@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.antonia.uaicamping.ui.anuncio.AnuncioActivity;
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.Area;
 
 import java.util.List;
 import java.util.Locale;

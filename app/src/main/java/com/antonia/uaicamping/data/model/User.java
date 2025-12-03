@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.data.model;
 
 public class User {
     private int id;

@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.perfil;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -11,6 +11,11 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.antonia.uaicamping.ui.main.MainActivity;
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.User;
 
 import java.util.Calendar;
 import java.util.Locale;

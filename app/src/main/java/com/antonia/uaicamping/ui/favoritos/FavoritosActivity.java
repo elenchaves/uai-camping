@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.favoritos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.adapters.AreaAdapter;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.Area;
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.ui.cadastroCamping.CadastroCampingActivity;
+import com.antonia.uaicamping.ui.main.MainActivity;
+import com.antonia.uaicamping.ui.perfil.PerfilUsuarioActivity;
 
 import java.util.List;
 

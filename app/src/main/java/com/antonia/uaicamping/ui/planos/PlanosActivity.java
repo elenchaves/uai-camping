@@ -1,13 +1,18 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.planos;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.ui.cadastroCamping.CadastroCampingActivity;
+import com.antonia.uaicamping.ui.favoritos.FavoritosActivity;
+import com.antonia.uaicamping.ui.perfil.PerfilUsuarioActivity;
 
 public class PlanosActivity extends AppCompatActivity {
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".AjudaActivity">
+    tools:context=".ui.ajuda.AjudaActivity">
 
     <RelativeLayout
         android:id="@+id/header_top"

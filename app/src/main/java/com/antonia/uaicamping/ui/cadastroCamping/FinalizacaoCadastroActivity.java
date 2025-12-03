@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.cadastroCamping;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.R;
 
 public class FinalizacaoCadastroActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.cadastroCamping;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.antonia.uaicamping.utils.OnFragmentInteractionListener;
+import com.antonia.uaicamping.R;
 
 public class CadastroCampingFragment1 extends Fragment {
 

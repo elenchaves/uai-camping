@@ -1,15 +1,22 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.ajuda;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.antonia.uaicamping.ui.favoritos.FavoritosActivity;
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.User;
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.ui.cadastroCamping.CadastroCampingActivity;
+import com.antonia.uaicamping.ui.perfil.PerfilUsuarioActivity;
 
 public class AjudaActivity extends AppCompatActivity {
 

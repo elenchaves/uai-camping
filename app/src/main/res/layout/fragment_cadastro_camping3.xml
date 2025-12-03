@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F0F4F7"
-    tools:context=".CadastroCampingFragment3">
+    tools:context=".ui.cadastroCamping.CadastroCampingFragment3">
 
     <LinearLayout
         android:layout_width="match_parent"

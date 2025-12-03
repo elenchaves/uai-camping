@@ -1,18 +1,20 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.perfil;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.User;
 
 import java.util.Calendar;
 import java.util.Locale;

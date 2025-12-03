@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.data.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.antonia.uaicamping.data.model.Area;
+import com.antonia.uaicamping.data.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -293,7 +296,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             null,
             COL_AREA_USER_ID + " = ?",
             new String[]{String.valueOf(userId)},
-            null, null, COL_AREA_ID + " DESC"); // Ordena para pegar o mais recente
+            null, null, COL_AREA_ID + " DESC");
 
         if (cursor.moveToFirst()) {
             do {
@@ -376,4 +379,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return favoriteList;
     }
+
+    public boolean updateArea(Area area) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(COL_TITLE, area.getTitle());
+        values.put(COL_DESCRIPTION, area.getDescription());
+        values.put(COL_ADDRESS, area.getAddress());
+        values.put(COL_PRICE_PER_NIGHT, area.getPricePerNight());
+        values.put(COL_MAX_GUESTS, area.getMaxGuests());
+        values.put(COL_HAS_WATER, area.isHasWater() ? 1 : 0);
+        values.put(COL_HAS_ELECTRICITY, area.isHasElectricity() ? 1 : 0);
+
+        int rows = db.update(TABLE_AREAS, values,
+            COL_AREA_ID + " = ?",
+            new String[]{String.valueOf(area.getId())});
+
+        db.close();
+        return rows > 0;
+    }
+
 }

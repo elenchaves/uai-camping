@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.cadastroCamping;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.ui.main.MainActivity;
+import com.antonia.uaicamping.utils.OnFragmentInteractionListener;
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.Area;
 
 public class CadastroCampingActivity extends AppCompatActivity implements OnFragmentInteractionListener {
 
@@ -132,7 +139,6 @@ public class CadastroCampingActivity extends AppCompatActivity implements OnFrag
         }
     }
 
-    // Método auxiliar para obter o Bundle de dados em construção (útil para Fragments)
     public Bundle getAreaDataBundle() {
         return areaDataBundle;
     }

@@ -1,4 +1,4 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.cadastroCamping;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,12 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
+
+import com.antonia.uaicamping.utils.OnFragmentInteractionListener;
+import com.antonia.uaicamping.R;
 
 public class CadastroCampingFragment4 extends Fragment {
 
@@ -112,20 +113,17 @@ public class CadastroCampingFragment4 extends Fragment {
         }
 
         Bundle data = new Bundle();
+        Bundle existingData = ((CadastroCampingActivity) requireActivity()).getAreaDataBundle();
+        data.putAll(existingData);
+
         data.putBoolean("ACEITA_BARRACAS", aceitaBarracas);
         data.putBoolean("ACEITA_RVS", aceitaRvs);
         data.putBoolean("POSSUI_CHALES", possuiChales);
         data.putString("PET_STATUS", petStatus);
 
-
-        data.putDouble(KEY_PRICE_PER_NIGHT, 50.0);
-        data.putInt(KEY_MAX_GUESTS, 10);
-        data.putBoolean(KEY_HAS_WATER, true);
-        data.putBoolean(KEY_HAS_ELECTRICITY, true);
-
         listener.onNextStep(data);
-
     }
+
 
     @Override
     public void onDetach() {

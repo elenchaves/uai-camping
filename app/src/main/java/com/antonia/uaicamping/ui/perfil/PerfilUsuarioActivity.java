@@ -1,8 +1,8 @@
-package com.antonia.uaicamping;
+package com.antonia.uaicamping.ui.perfil;
+
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,11 +15,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.antonia.uaicamping.R;
+import com.antonia.uaicamping.utils.SessionManager;
+import com.antonia.uaicamping.data.database.DatabaseHelper;
+import com.antonia.uaicamping.data.model.User;
+import com.antonia.uaicamping.ui.ajuda.AjudaActivity;
+import com.antonia.uaicamping.ui.anuncio.HomeActivity2;
+import com.antonia.uaicamping.ui.cadastroCamping.CadastroCampingActivity;
+import com.antonia.uaicamping.ui.favoritos.FavoritosActivity;
+import com.antonia.uaicamping.ui.main.MainActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
     private DatabaseHelper dbHelper;
+    private SessionManager sessionManager;
     private int currentUserId = -1;
     private User currentUser;
 
@@ -27,8 +37,10 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
     private ImageButton btnMenuDrawer;
     private Button btnAlterarDados;
 
+
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+
 
     private ActivityResultLauncher<Intent> editProfileLauncher;
 
@@ -39,16 +51,20 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perfil_usuario);
 
         dbHelper = new DatabaseHelper(this);
+        sessionManager = new SessionManager(this);
+
 
         editProfileLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
 
                 if (result.getResultCode() == RESULT_OK) {
+
                     loadUserProfile(currentUserId);
                     Toast.makeText(this, "Perfil atualizado!", Toast.LENGTH_SHORT).show();
                 }
             });
+
 
         tvNome = findViewById(R.id.tv_nome);
         tvEmail = findViewById(R.id.tv_email_perfil);
@@ -60,20 +76,26 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         btnMenuDrawer = findViewById(R.id.btn_menu);
         btnAlterarDados = findViewById(R.id.btn_alterar_dados);
 
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
         currentUserId = getIntent().getIntExtra("USER_ID", -1);
+        if (currentUserId == -1) {
+            currentUserId = sessionManager.getUserId();
+        }
 
         if (currentUserId != -1) {
             loadUserProfile(currentUserId);
         } else {
-            Toast.makeText(this, "Erro: Usuário não autenticado. Redirecionando.", Toast.LENGTH_LONG).show();
+
+            Toast.makeText(this, "Sessão expirada. Redirecionando para o login.", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
             return;
         }
+
 
         setupDrawerNavigation();
         setupFixedNavigation();
@@ -91,12 +113,14 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         currentUser = dbHelper.getUserById(userId);
 
         if (currentUser != null) {
+
             tvNome.setText(currentUser.getName());
             tvEmail.setText(currentUser.getEmail());
             tvDataNascimento.setText(currentUser.getBirthDate());
             tvGenero.setText(currentUser.getGender());
             tvCpf.setText(currentUser.getCpf());
             tvTelefone.setText(currentUser.getPhone());
+
 
             View headerView = navigationView.getHeaderView(0);
             TextView tvHeaderEmail = headerView.findViewById(R.id.tv_header_email);
@@ -113,12 +137,14 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
 
         btnMenuDrawer.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
+
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
 
             if (id == R.id.nav_cadastro_camping) {
                 navigateToCadastroCamping();
             } else if (id == R.id.nav_status) {
+
                 Intent intent = new Intent(PerfilUsuarioActivity.this, StatusCampingActivity.class);
                 intent.putExtra("USER_ID", currentUserId);
                 startActivity(intent);
@@ -129,7 +155,9 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
                 startActivity(intent);
             } else if (id == R.id.nav_sair) {
 
+                sessionManager.logout();
                 Toast.makeText(PerfilUsuarioActivity.this, "Logout realizado.", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(PerfilUsuarioActivity.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -142,11 +170,14 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
 
     private void setupFixedNavigation() {
 
+
+
         findViewById(R.id.nav_home).setOnClickListener(v -> {
             Intent intent = new Intent(this, HomeActivity2.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         });
+
 
         findViewById(R.id.nav_favorite).setOnClickListener(v -> {
             Intent intent = new Intent(this, FavoritosActivity.class);
@@ -154,7 +185,9 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+
         findViewById(R.id.nav_edit).setOnClickListener(v -> navigateToCadastroCamping());
+
 
         findViewById(R.id.nav_profile).setOnClickListener(v -> Toast.makeText(this, "Você já está no Perfil.", Toast.LENGTH_SHORT).show());
     }

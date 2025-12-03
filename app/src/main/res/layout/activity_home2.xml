@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F0F4F7"
-    tools:context=".HomeActivity2">
+    tools:context=".ui.anuncio.HomeActivity2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:text="Uai, bem-vindo!"
-            android:textColor="@color/orange"
+            android:textColor="@color/white"
             android:textSize="34sp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"

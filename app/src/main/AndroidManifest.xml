@@ -13,31 +13,31 @@
         android:theme="@style/Theme.UaiCamping"
         tools:targetApi="31">
         <activity
-            android:name=".PlanosActivity"
+            android:name=".ui.planos.PlanosActivity"
             android:exported="false" />
         <activity
-            android:name=".StatusCampingActivity"
+            android:name=".ui.perfil.StatusCampingActivity"
             android:exported="false" />
         <activity
-            android:name=".AjudaActivity"
+            android:name=".ui.ajuda.AjudaActivity"
             android:exported="false" />
         <activity
-            android:name=".PerfilUsuarioActivity2"
+            android:name=".ui.perfil.PerfilUsuarioActivity2"
             android:exported="false" />
         <activity
-            android:name=".FavoritosActivity"
+            android:name=".ui.favoritos.FavoritosActivity"
             android:exported="false" />
         <activity
-            android:name=".PerfilUsuarioActivity"
+            android:name=".ui.perfil.PerfilUsuarioActivity"
             android:exported="false" />
         <activity
-            android:name=".FinalizacaoCadastroActivity"
+            android:name=".ui.cadastroCamping.FinalizacaoCadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroCampingActivity"
+            android:name=".ui.cadastroCamping.CadastroCampingActivity"
             android:exported="false" />
         <activity
-            android:name=".AnuncioActivity"
+            android:name=".ui.anuncio.AnuncioActivity"
             android:exported="false"
             android:theme="@style/Theme.UaiCamping" />
         <activity
@@ -45,16 +45,16 @@
             android:exported="false"
             android:theme="@style/Theme.UaiCamping" />
         <activity
-            android:name=".HomeActivity2"
+            android:name=".ui.anuncio.HomeActivity2"
             android:exported="false" />
         <activity
-            android:name=".Redefinir_Senhactivity2"
+            android:name=".ui.perfil.Redefinir_Senhactivity2"
             android:exported="false" />
         <activity
-            android:name=".CadastrarActivity"
+            android:name=".ui.perfil.CadastrarActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
