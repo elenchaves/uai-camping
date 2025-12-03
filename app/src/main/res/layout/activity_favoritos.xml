@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavoritosActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/orange"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="16dp"
+            android:src="@drawable/arrow_back"
+            android:contentDescription="Voltar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Favoritos"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorites_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/header_favorites"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_camping_card" />
+
+    <TextView
+        android:id="@+id/tv_empty_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Você ainda não tem campings favoritos."
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/rv_favorites_list"
+        app:layout_constraintBottom_toBottomOf="@id/rv_favorites_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_container"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/nav_home"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/orange"
+            android:text="Início"
+            app:icon="@drawable/casa_24" />
+
+        <ImageButton
+            android:id="@+id/nav_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Favoritos"
+            android:src="@drawable/coracao" />
+
+        <ImageButton
+            android:id="@+id/nav_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Cadastrar Área"
+            android:src="@drawable/editar" />
+
+        <ImageButton
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Perfil"
+            android:src="@drawable/login" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

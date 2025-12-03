@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F7"
+    tools:context=".StatusCampingActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/header_status"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/orange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="16dp"
+            android:src="@drawable/arrow_back"
+            android:contentDescription="Voltar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Status Camping"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header_status"
+        app:layout_constraintBottom_toTopOf="@+id/nav_bar_container_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_status_cadastro_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status do seu cadastro"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/Off_White"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_area_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camping Serra Verde"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_sent_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enviado em: 25/10/2025"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_current_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Em análise"
+                        android:textColor="@color/orange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seu cadastro está sendo revisado pela equipe."
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mudar_plano_status"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto"
+                android:text="Mudar Plano"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/nav_bar_container_status"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Inicio"
+            app:backgroundTint="@color/orange"
+            app:icon="@drawable/casa_24" />
+
+        <ImageButton
+            android:id="@+id/nav_favorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favoritos"
+            android:scaleType="centerInside"
+            android:src="@drawable/coracao"
+            app:tint="@color/Off_White" />
+
+        <ImageButton
+            android:id="@+id/nav_edit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Adicionar Anúncio"
+            android:src="@drawable/editar" />
+
+        <ImageButton
+            android:id="@+id/nav_profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Perfil"
+            android:src="@drawable/login"
+            app:tint="@color/Off_White" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

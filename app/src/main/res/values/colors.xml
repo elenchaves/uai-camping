@@ -6,4 +6,8 @@
     <color name="orange">#e87a4d</color>
     <color name="Off_White">#f7f9f7</color>
     <color name="gray">#e0e0e0</color>
+    <color name="Branco_Off_white">#f7f9f7</color>
+    <color name="colorPrimary">#66BB6A</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F4F7"
+    tools:context=".CadastroCampingFragment4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipamentos de aceitação:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceitação de barracas?"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <RadioGroup
+            android:id="@+id/rg_barracas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_aceita_barracas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceita barracas?"
+                android:checked="true"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_nao_aceita_barracas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não aceita barracas?"
+                android:layout_marginBottom="4dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceitação de RVs ?"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <RadioGroup
+            android:id="@+id/rg_rvs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_aceita_rvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceita RVs?"
+                android:checked="true"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_nao_aceita_rvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não aceita RVs?"
+                android:layout_marginBottom="4dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipamentos: Chalés, Cabanas ou Suites?"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <RadioGroup
+            android:id="@+id/rg_chales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_possui_chales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Possui Chalés, Cabanas ou Suites"
+                android:checked="true"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_nao_possui_chales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não possui Chalés, Cabanas ou Suites"
+                android:layout_marginBottom="4dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceita animais de estimação"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <RadioGroup
+            android:id="@+id/rg_animais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/rb_aceita_animais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceita animais"
+                android:checked="true"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_nao_aceita_animais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não aceita animais"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_aceita_animais_restricoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceita algumas espécies, mas com restrições."
+                android:layout_marginBottom="4dp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_voltar_4"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|fill_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/roboto"
+                android:text="Voltar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_finalizar"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="fill_vertical|end"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/roboto"
+                android:text="Finalizar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

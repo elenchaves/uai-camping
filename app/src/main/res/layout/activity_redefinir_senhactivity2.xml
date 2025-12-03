@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+        android:id="@+id/btn_alterar_dados"
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:layout_marginTop="96dp"

@@ -35,8 +35,8 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
-        android:text="Email"
         android:textColor="@color/white"
+        android:textColorHint="@color/Off_White"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -48,21 +48,23 @@
         android:layout_width="344dp"
         android:layout_height="56dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="34dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/input_green"
         android:ems="10"
         android:fontFamily="@font/roboto"
         android:hint="Senha"
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
-        android:text="Senha"
         android:textColor="@color/white"
+        android:textColorHint="@color/Off_White"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <TextView
         android:id="@+id/textView"
@@ -89,11 +91,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btn_alterar_dados"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+        android:id="@+id/btn_alterar_dados"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginTop="96dp"

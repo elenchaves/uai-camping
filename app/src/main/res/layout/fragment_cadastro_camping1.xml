@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F4F7"
+    tools:context=".CadastroCampingFragment1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:labelFor="@id/et_nome"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textPersonName"
+            android:hint="Nome completo"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CPF:"
+            android:labelFor="@id/et_cpf"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="number"
+            android:hint="000.000.000-00"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefone: ()"
+            android:labelFor="@id/et_telefone"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="phone"
+            android:hint="(99) 99999-9999"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CEP:"
+            android:labelFor="@id/et_cep"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/et_cep"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:inputType="number"
+                android:hint="00000-000"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não sei meu cep"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço:"
+            android:labelFor="@id/et_endereco"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textPostalAddress"
+            android:hint="Rua, Avenida..."
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nº:"
+            android:labelFor="@id/et_numero"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="number"
+            android:hint="123"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complemento:"
+            android:labelFor="@id/et_complemento"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_complemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapSentences"
+            android:hint="Ap. 101, Bloco B"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ponto de referência:"
+            android:labelFor="@id/et_ponto_referencia"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_ponto_referencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapSentences"
+            android:hint="Próximo à padaria"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bairro:"
+            android:labelFor="@id/et_bairro"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_bairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapSentences"
+            android:hint="Centro"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cidade:"
+            android:labelFor="@id/et_cidade"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_cidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapWords"
+            android:hint="São Paulo"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:labelFor="@id/et_estado"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapCharacters"
+            android:hint="SP"
+            android:maxLength="2"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continuar"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="96dp"
+            android:fontFamily="@font/roboto"
+            android:text="Continuar"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+</ScrollView>

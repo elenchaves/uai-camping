@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F4F7"
+    tools:context=".CadastroCampingFragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Camping:"
+            android:labelFor="@id/et_nome_camping"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_nome_camping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapWords"
+            android:hint="Nome do seu estabelecimento"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-Mail:"
+            android:labelFor="@id/et_email"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:hint="email@exemplo.com"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefone: ()"
+            android:labelFor="@id/et_telefone_camping"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_telefone_camping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="phone"
+            android:hint="(99) 99999-9999"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Você é:"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <RadioGroup
+            android:id="@+id/rg_owner_employee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sou proprietário do Camping"
+                android:checked="true"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sou funcionário representante do Camping"
+                android:layout_marginBottom="4dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço do Camping:"
+            android:labelFor="@id/et_endereco_camping"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_endereco_camping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textPostalAddress"
+            android:hint="Rua, Avenida..."
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bairro/Distrito:"
+            android:labelFor="@id/et_bairro_camping"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_bairro_camping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapSentences"
+            android:hint="Bairro ou Distrito"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cidade:"
+            android:labelFor="@id/et_cidade_camping"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_cidade_camping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapWords"
+            android:hint="Cidade"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:labelFor="@id/et_estado_camping"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_estado_camping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textCapCharacters"
+            android:hint="UF"
+            android:maxLength="2"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coordenadas de GPS:"
+            android:labelFor="@id/et_gps_coordinates"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/et_gps_coordinates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="text"
+            android:hint="Latitude, Longitude"
+            android:layout_marginBottom="32dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_voltar"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|fill_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/roboto"
+                android:text="Voltar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continuar"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="fill_vertical|end"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/roboto"
+                android:text="Continuar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
